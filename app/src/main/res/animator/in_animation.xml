@@ -8,16 +8,17 @@
 		android:valueTo="0" />
 
 	<objectAnimator
-		android:duration="@integer/counter_animation_length"
+		android:duration="@integer/counter_animation_half_length"
 		android:propertyName="rotationX"
 		android:valueFrom="-90"
 		android:valueTo="0"
-		android:startOffset="@integer/counter_animation_length"/>
+		android:interpolator="@android:interpolator/decelerate_quad"
+		android:startOffset="@integer/counter_animation_half_length"/>
 
 	<objectAnimator
 		android:duration="0"
 		android:propertyName="alpha"
-		android:startOffset="@integer/counter_animation_length"
+		android:startOffset="@integer/counter_animation_half_length"
 		android:valueFrom="0.0"
 		android:valueTo="1.0" />
 </set>
